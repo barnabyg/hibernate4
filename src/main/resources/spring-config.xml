@@ -30,4 +30,14 @@
     </property>
   </bean>
 
+  <bean id="userHelper"
+   class="com.bhgagile.hibernate4.helpers.UserHelperImpl">
+  </bean>
+
+  <bean id="userDao"
+   class="com.bhgagile.hibernate4.dao.UserHibernateDao">
+    <constructor-arg>
+      <value>com.bhgagile.hibernate4.dao.UserHibernateDao</value>
+    </constructor-arg>
+  </bean>
 </beans>

@@ -10,6 +10,10 @@ package com.bhgagile.hibernate4;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.bhgagile.hibernate4.helpers.UserHelper;
+import com.bhgagile.hibernate4.helpers.UserHelperImpl;
+
+
 /**
  * @author Barnaby Golden
  *
@@ -34,6 +38,7 @@ public final class Hibernate4Main {
         context.registerShutdownHook();
 
         // implementation
+        final UserHelper helper = new UserHelperImpl();
 
         context.close();
     }

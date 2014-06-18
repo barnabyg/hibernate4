@@ -10,16 +10,26 @@ package com.bhgagile.hibernate4.helpers;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
 import com.bhgagile.hibernate4.model.User;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * @author Barnaby Golden
  *
  */
+@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/resources/spring-config.xml")
 public final class UserHelperTest {
+
+    /**
+     * UserHelper.
+     */
+    @Autowired
+    private UserHelper userHelper;
 
     /**
      * Create an instance of a User in the database.
@@ -28,8 +38,6 @@ public final class UserHelperTest {
      */
     @Test
     public void createUser() {
-
-        final UserHelper userHelper = new UserHelper();
 
         final User user = new User();
 

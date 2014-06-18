@@ -7,30 +7,48 @@
  */
 package com.bhgagile.hibernate4.helpers;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.bhgagile.hibernate4.dao.UserDao;
 import com.bhgagile.hibernate4.model.User;
 
 /**
  * @author Barnaby Golden
  *
  */
-public interface UserHelper {
+public final class UserHelperImpl implements UserHelper {
+
+    /**
+     * User DAO.
+     */
+    @Autowired
+    private UserDao userDao;
 
     /**
      * Create an instance of a user.
      * @param user user to create
      * @return user id
      */
-    Long createUser(User user);
+    public Long createUser(final User user) {
+
+        return new Long(0);
+    }
+
     /**
      * Retrieve a user.
      * @param userId the user id to find
      * @return returns user
      */
-    User retrieveUser(Long userId);
+    public User retrieveUser(final Long userId) {
+        return new User();
+    }
 
     /**
      * Delete a user.
      * @param userId id of user to delete
      */
-    void delete(Long userId);
+    public void delete(final Long userId) {
+
+    }
+
 }
