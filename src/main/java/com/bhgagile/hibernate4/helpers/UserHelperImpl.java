@@ -31,7 +31,7 @@ public final class UserHelperImpl implements UserHelper {
      */
     public Long createUser(final User user) {
 
-        return new Long(0);
+        return userDao.create(user);
     }
 
     /**
@@ -40,15 +40,15 @@ public final class UserHelperImpl implements UserHelper {
      * @return returns user
      */
     public User retrieveUser(final Long userId) {
-        return new User();
+        return userDao.retrieve(userId);
     }
 
     /**
      * Delete a user.
-     * @param userId id of user to delete
+     * @param user to delete
      */
-    public void delete(final Long userId) {
-
+    public void delete(final User user) {
+        userDao.delete(user);
     }
 
 }

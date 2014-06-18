@@ -9,6 +9,9 @@ package com.bhgagile.hibernate4.dao;
 
 import java.io.Serializable;
 
+import javax.transaction.Transactional;
+
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -40,33 +43,49 @@ public class GenericHibernateDao<T, P extends Serializable>
     }
 
     /**
+     * Return the session.
+     * @return session
+     */
+    protected final Session getSession() {
+        return this.sessionFactory.getCurrentSession();
+    }
+
+    /**
      * {@inheritDoc}
      */
+    @Transactional
+    @SuppressWarnings("unchecked")
     public final P create(final T entity) {
 
-        return null;
+        return (P) getSession().save(entity);
     }
 
     /**
      * {@inheritDoc}
      */
+    @Transactional
+    @SuppressWarnings("unchecked")
     public final T retrieve(final P id) {
 
-        return null;
+        return (T) getSession().get(type, id);
     }
 
     /**
      * {@inheritDoc}
      */
+    @Transactional
     public final void update(final T entity) {
 
+        getSession().update(entity);
     }
 
     /**
      * {@inheritDoc}
      */
+    @Transactional
     public final void delete(final T entity) {
 
+        getSession().delete(entity);
     }
 
 }

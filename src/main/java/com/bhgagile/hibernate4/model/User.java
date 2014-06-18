@@ -7,12 +7,23 @@
  */
 package com.bhgagile.hibernate4.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * @author Barnaby Golden
  *
  */
+@Entity
 public final class User {
 
+    /**
+     * Unique id.
+     */
+    @Id
+    @GeneratedValue
+    private long id;
     /**
      * First name.
      */

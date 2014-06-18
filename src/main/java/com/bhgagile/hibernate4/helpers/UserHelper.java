@@ -30,7 +30,7 @@ public interface UserHelper {
 
     /**
      * Delete a user.
-     * @param userId id of user to delete
+     * @param user to delete
      */
-    void delete(Long userId);
+    void delete(User user);
 }

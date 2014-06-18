@@ -51,6 +51,6 @@ public final class UserHelperTest {
         assertEquals("First names do not match", "John", user2.getFirstName());
         assertEquals("Surnames do not match", "Smith", user2.getSurname());
 
-        userHelper.delete(userId);
+        userHelper.delete(user2);
     }
 }
