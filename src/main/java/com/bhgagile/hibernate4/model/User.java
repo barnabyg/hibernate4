@@ -24,12 +24,16 @@ public final class User {
     @Id
     @GeneratedValue
     private long id;
+
     /**
-     * @return the id
+     * First name.
      */
-    public long getId() {
-        return id;
-    }
+    private String firstName;
+
+    /**
+     * Surname.
+     */
+    private String surname;
 
     /**
      * @param id the id to set
@@ -37,15 +41,6 @@ public final class User {
     public void setId(final long id) {
         this.id = id;
     }
-
-    /**
-     * First name.
-     */
-    private String firstName;
-    /**
-     * Surname.
-     */
-    private String surname;
 
     /**
      * Set first name.
@@ -63,6 +58,13 @@ public final class User {
     public void setSurname(final String surname) {
 
         this.surname = surname;
+    }
+
+    /**
+     * @return the id
+     */
+    public long getId() {
+        return id;
     }
 
     /**
