@@ -34,11 +34,13 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <junit.version>4.12</junit.version>
 <!--     <cobertura.version>2.7</cobertura.version> -->
     <pmd.version>3.9.0</pmd.version>
     <checkstyle.version>3.0.0</checkstyle.version>
     <spring.version>5.0.6.RELEASE</spring.version>
     <hibernate.version>5.3.1.Final</hibernate.version>
+    <hsqldb.version>2.4.1</hsqldb.version>
     <java.target>1.10</java.target>
   </properties>
 
@@ -192,7 +194,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -218,7 +220,7 @@
     <dependency>
       <groupId>org.hsqldb</groupId>
       <artifactId>hsqldb</artifactId>
-      <version>2.3.2</version>
+      <version>${hsqldb.version}</version>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
