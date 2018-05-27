@@ -20,6 +20,10 @@
     </properties>
   </rule>
 
+  <rule ref="rulesets/java/design.xml/DataClass">
+    <priority>5</priority>
+  </rule>
+
   <rule ref="rulesets/java/design.xml/AvoidSynchronizedAtMethodLevel">
     <priority>5</priority>
   </rule>
