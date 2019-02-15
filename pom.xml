@@ -13,25 +13,6 @@
     <maven>3.0.1</maven>
   </prerequisites>
 
-<!--   <properties> -->
-<!--     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
-<!--     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> -->
-<!--     <pmd.version>3.9.0</pmd.version> -->
-<!--     <checkstyle.version>3.0.0</checkstyle.version> -->
-<!--     <spring.version>5.0.6.RELEASE</spring.version> -->
-<!--     <hibernate.version>5.3.1.Final</hibernate.version> -->
-<!--     <hsqldb.version>2.4.1</hsqldb.version> -->
-<!--     <selenium.version>3.12.0</selenium.version> -->
-<!--     <cucumber.version>1.2.5</cucumber.version> -->
-<!--     <surefire.version>2.21.0</surefire.version> -->
-<!--     <junit.version>4.12</junit.version> -->
-<!--     <jetty.version>9.4.9.v20180320</jetty.version> -->
-<!--     <maven.version>3.5.2</maven.version> -->
-<!--     <mavencompiler.version>3.7.0</mavencompiler.version> -->
-<!--     <java.target>1.10</java.target> -->
-<!--     <javadoc.version>3.0.0</javadoc.version> -->
-<!--   </properties> -->
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.version>4.12</junit.version>
@@ -56,6 +37,18 @@
         <configuration>
           <release>10</release>
         </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.7.1</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.0.0</version>
       </plugin>
 
       <plugin>
@@ -175,15 +168,6 @@
 <!--         <artifactId>cobertura-maven-plugin</artifactId> -->
 <!--         <version>${cobertura.version}</version> -->
 <!--       </plugin> -->
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.9.1</version>
-        <configuration>
-          <failOnError>false</failOnError>
-        </configuration>
-      </plugin>
 
     </plugins>
   </reporting>
